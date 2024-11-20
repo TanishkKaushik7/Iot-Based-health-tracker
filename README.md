@@ -24,4 +24,16 @@ Checks the initialization status of the MAX30100 sensor and logs an error messag
 Real-Time Health Monitoring:
 
 Designed for real-time remote health tracking, making it suitable for applications such as personal health devices or patient monitoring systems.
+Setup Phase:
+
+The ESP8266 module connects to the specified Wi-Fi network and the Blynk IoT platform.
+The MAX30100 sensor is initialized, and its heartbeat detection callback is set up.
+Loop Phase:
+
+The ESP8266 communicates with the Blynk server (Blynk.run()).
+The MAX30100 sensor continuously updates its readings (pox.update()).
+Every second:
+The heart rate and SpO2 values are logged to the Serial Monitor.
+These values are transmitted to the Blynk platform, where they can be visualized.
+
 
